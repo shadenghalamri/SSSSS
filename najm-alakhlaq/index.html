@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>نجم الأخلاق | ترشيح وشهادة PDF</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f5f7fb;font-family:"Helvetica Neue",Tahoma,Arial,sans-serif;color:#20263d;line-height:1.6}
+header{background:#29235d;color:#fff;text-align:center;padding:20px 12px}header h1{margin:0;font-size:25px}header p{margin:4px 0}
+main{max-width:820px;margin:20px auto;padding:0 12px}.panel{background:white;padding:22px;border-radius:16px;box-shadow:0 2px 15px #1f295013;margin-bottom:16px}
+h2{font-size:19px;margin:0 0 12px;color:#2d2667}label{display:block;font-size:14px;font-weight:bold;margin:12px 0 5px}
+input,select,textarea{font-family:inherit;font-size:17px;width:100%;padding:12px;border:1px solid #c9cde0;border-radius:9px;background:white;color:#222}
+.actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:16px}button{font-family:inherit;border:0;border-radius:10px;padding:13px 16px;background:#3b3181;color:#fff;font-weight:bold;font-size:16px;cursor:pointer;flex:1;min-width:150px}button.secondary{background:#096d72}button.gold{background:#b28735}.small{color:#606a7f;font-size:13px}
+#certificate{background:#fff;aspect-ratio:297/210;width:100%;position:relative;overflow:hidden;border:9px solid #31276b;outline:2px solid #b79a55;outline-offset:-17px;padding:24px;display:flex;align-items:center;justify-content:center;text-align:center}
+#certificate:before{content:"";position:absolute;inset:25px;border:2px solid #e3d7aa;pointer-events:none}
+#certificate .inner{position:relative;z-index:1;width:100%;padding:10px 23px}#certificate .ministry{font-size:clamp(9px,1.7vw,17px);font-weight:bold;color:#31276b}
+#certificate .school{font-size:clamp(10px,2.0vw,20px);font-weight:700;color:#31276b}
+.star{color:#b99a40;font-size:clamp(26px,5vw,54px);line-height:1.2}
+#certificate h3{font-size:clamp(19px,4.2vw,43px);color:#32286d;margin:2px 0 12px}
+#certificate .copy{font-size:clamp(10px,1.7vw,18px);margin:4px 0}
+#certificate .name{font-size:clamp(18px,4vw,40px);color:#087b7f;font-weight:800;margin:3px 0}
+#certificate .value{color:#8d681e;font-weight:800}#certificate .bottom{margin-top:10px;display:flex;justify-content:space-between;align-items:end;gap:10px;font-size:clamp(9px,1.5vw,15px)}
+#certificate .director{font-weight:700;color:#302564}#certificate .detail{text-align:right}
+#status{margin-top:10px;font-size:14px;color:#14634c}#status.error{color:#a42b2b}
+@media(max-width:520px){.panel{padding:13px}#certificate{border-width:5px;padding:8px;outline-offset:-10px}#certificate:before{inset:12px;border-width:1px}#certificate .inner{padding:4px 10px}#certificate h3{margin:0 0 4px}#certificate .bottom{margin-top:3px}}
+@page{size:A4 landscape;margin:0}@media print{html,body{margin:0;background:#fff}header,.form-panel,.buttons-panel,.small,#status{display:none!important}main{margin:0;max-width:none;padding:0}.cert-panel{padding:0!important;box-shadow:none!important;margin:0!important;border-radius:0!important}#certificate{width:297mm;height:210mm;aspect-ratio:auto;border-width:9mm;outline-offset:-13mm;print-color-adjust:exact;-webkit-print-color-adjust:exact}#certificate:before{inset:12mm}#certificate .inner{padding:0 20mm}#certificate .ministry{font-size:18pt}#certificate .school{font-size:20pt}.star{font-size:54pt}#certificate h3{font-size:43pt}#certificate .copy{font-size:18pt}#certificate .name{font-size:38pt}#certificate .bottom{font-size:16pt;margin-top:15pt}}
+</style></head>
+<body><header><h1>⭐ نجم الأخلاق</h1><p>ترشيح أسبوعي وشهادة تكريم قابلة للإصدار PDF</p></header>
+<main><section class="panel form-panel"><h2>بيانات الترشيح</h2>
+<label for="school">المدرسة</label><select id="school"><option>متوسطة الأنصار</option><option selected>ابتدائية عاصم بن ثابت</option></select>
+<label for="student">اسم الطالب</label><input id="student" placeholder="اكتب اسم الطالب الكامل" autocomplete="off">
+<label for="classroom">الفصل</label><input id="classroom" placeholder="مثال: السادس ب">
+<label for="week">الأسبوع الدراسي</label><input id="week" placeholder="مثال: الثالث عشر">
+<label for="virtue">القيمة الأخلاقية</label><select id="virtue"><option>الاحترام</option><option>الأمانة</option><option selected>حُسن القول</option><option>التسامح</option><option>المبادرة الإيجابية</option></select>
+<label for="reason">موقف يبرر الترشيح (للتوثيق فقط)</label><textarea id="reason" rows="2" placeholder="اكتب موقفًا إيجابيًا واقعيًا"></textarea>
+<label for="date">تاريخ التكريم</label><input id="date" type="date">
+<label for="teacher">رائد الفصل</label><input id="teacher" placeholder="اسم رائد الفصل">
+<p class="small">تبقى البيانات في هذه الصفحة على جهازك ولا تُرسل إلى قاعدة بيانات. لا يلزم إنشاء حساب.</p></section>
+<section class="panel buttons-panel"><h2>المعاينة والإصدار</h2><div class="actions">
+<button class="secondary" type="button" id="preview">معاينة الشهادة</button><button class="gold" type="button" id="download">تنزيل PDF</button><button type="button" id="print">طباعة / حفظ PDF</button></div>
+<div id="status" role="status" aria-live="polite">أدخل اسم الطالب وستنعكس بياناته مباشرة في الشهادة أدناه.</div></section>
+<section class="panel cert-panel" id="cert-section"><div id="certificate">
+<div class="inner"><div class="ministry">المملكة العربية السعودية – وزارة التعليم</div>
+<div class="school" id="c-school">ابتدائية عاصم بن ثابت</div><div class="star">★</div><h3>شهادة نجم الأخلاق</h3>
+<div class="copy">تتقدم إدارة المدرسة بالتهنئة والتقدير للطالب</div>
+<div class="name" id="c-student">اسم الطالب</div>
+<div class="copy">لحصوله على لقب «نجم الأخلاق» وتميزه في قيمة <span class="value" id="c-virtue">حُسن القول</span></div>
+<div class="copy">وما أظهره من سلوك إيجابي يُحتذى به بين زملائه</div>
+<div class="copy">مع أطيب الأمنيات له بمزيد من التوفيق والتميز</div>
+<div class="bottom"><div class="detail">الفصل: <span id="c-classroom">—</span><br>الأسبوع: <span id="c-week">—</span><br>تاريخ التكريم: <span id="c-date">—</span></div>
+<div class="director">مدير المدرسة<br>غرمان بن زين العمري</div></div></div></div></section>
+<p class="small">إذا لم يبدأ تنزيل PDF على الآيفون، اضغط «طباعة / حفظ PDF»، ثم اختر مشاركة معاينة الطباعة وحفظها في الملفات بصيغة PDF.</p>
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<script>
+(function(){
+var ids=["school","student","classroom","week","virtue","date"];
+function el(x){return document.getElementById(x)}
+function d(x){return String(x||"").replace(/[0-9]/g,function(c){return "٠١٢٣٤٥٦٧٨٩"[+c]})}
+function update(){
+ids.forEach(function(id){var dest=el("c-"+id);if(!dest)return;var v=el(id).value.trim();if(id==="date"&&v){v=v.split("-").reverse().join("/");v=d(v)}
+dest.textContent=v||(id==="student"?"اسم الطالب":"—")});
+el("status").textContent="تم تحديث الشهادة بالبيانات الحالية.";
+}
+ids.forEach(function(id){el(id).addEventListener("input",update);el(id).addEventListener("change",update)});
+el("preview").addEventListener("click",function(){update();el("cert-section").scrollIntoView({behavior:"smooth",block:"start"})});
+el("print").addEventListener("click",function(){update();window.print()});
+el("download").addEventListener("click",function(){
+update();if(!el("student").value.trim()){el("status").textContent="يرجى إدخال اسم الطالب أولًا.";el("status").classList.add("error");return}
+el("status").classList.remove("error");el("status").textContent="جارٍ إعداد PDF...";
+if(typeof html2pdf==="undefined"){el("status").textContent="سيُفتح خيار الطباعة لحفظ الشهادة PDF.";window.print();return}
+var s=el("student").value.trim().replace(/[^ء-ي\w\s-]/g,"").slice(0,40);
+html2pdf().set({margin:0,filename:"شهادة_نجم_الأخلاق_"+s+".pdf",image:{type:"jpeg",quality:.98},html2canvas:{scale:2,backgroundColor:"#ffffff",useCORS:true},jsPDF:{unit:"mm",format:"a4",orientation:"landscape"},pagebreak:{mode:"avoid-all"}}).from(el("certificate")).save().then(function(){el("status").textContent="تم طلب تنزيل شهادة PDF."}).catch(function(){el("status").textContent="تعذر التنزيل؛ استخدم زر الطباعة وحفظ PDF.";});
+});
+el("date").value=new Date().toISOString().slice(0,10);update();
+})();
+</script></body></html>
